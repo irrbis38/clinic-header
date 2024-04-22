@@ -780,13 +780,13 @@ body.lock {
 }
 @media (max-width:767px) {
   .nheader__menu {
-    top: 100%;
+    position: fixed;
+    top: 54px;
     width: 100%;
     height: calc(100vh - 54px);
     border-radius: 0;
     text-align: center;
-    overflow-y: auto;
-    overflow-x: hidden
+    overflow-y: auto
   }
 }
 .nheader__list {
@@ -847,6 +847,9 @@ body.lock {
   }
 }
 @media (max-width:767px) {
+  .nheader__item {
+    padding: 0
+  }
   .nheader__item > a {
     padding: 10px 16px
   }
@@ -1337,6 +1340,12 @@ body.lock {
     background-color: var(--clinicalcenter-gray-border,#f5f5f5)
   }
 }
+@media (max-width:767px) {
+  .nheader__adult_list li:not(:last-child),
+  .nheader__kids_list li:not(:last-child) {
+    margin-bottom: 12px
+  }
+}
 .nheader__adult_list li:last-child a,
 .nheader__doctors_list li:last-child a {
   display: -webkit-flex;
@@ -1442,17 +1451,24 @@ body.lock {
 .nheader__doctors_list li:last-child a {
   color: var(--clinicalcenter-main1,#00c3bb)
 }
+.nheader__doctors_list li:not(:last-child) {
+  margin-bottom: 4px
+}
 @media (max-width:1199px) {
-  .nheader__doctors_list {
-    padding-top: 0
-  }
   .nheader__doctors_list a {
     padding: 10px 24px 10px 12px
   }
 }
 @media (max-width:767px) {
   .nheader__doctors_list {
-    width: 100%
+    width: 100%;
+    padding-top: 0
+  }
+  .nheader__doctors_list li:first-child {
+    margin-top: 12px
+  }
+  .nheader__doctors_list li:not(:last-child) {
+    margin-bottom: 12px
   }
 }
 .nheader__doctors_search {
@@ -1485,6 +1501,11 @@ body.lock {
   font-size: 16px;
   line-height: 110%;
   text-align: left
+}
+@media (max-width:767px) {
+  .nheader__form input {
+    padding-bottom: 30px
+  }
 }
 .nheader_input_name {
   margin-bottom: 16px
