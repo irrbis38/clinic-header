@@ -72,33 +72,34 @@ header.nheader
                             'Травматолог'
                         ]
 
-                    li.nheader__item.nheader-has-dropdown
+                    li.nheader__item: a(href="#") Врачи
+                    //- li.nheader__item.nheader-has-dropdown
 
-                        a(href="#") Врачи
+                    //-     a(href="#") Врачи
 
-                        .nheader__doctors
-                            button.nheader__back(aria-lable="Вернуться в предыдущее меню") Врачи
-                            ul.nheader__doctors_list
-                                each item in doctors_list
-                                    li: a(href="#")= item
-                                li: a(href="#") Все врачи
+                    //-     .nheader__doctors
+                    //-         button.nheader__back(aria-lable="Вернуться в предыдущее меню") Врачи
+                    //-         ul.nheader__doctors_list
+                    //-             each item in doctors_list
+                    //-                 li: a(href="#")= item
+                    //-             li: a(href="#") Все врачи
 
-                            .nheader__doctors_search
-                                p.nheader__doctors_title Поиск врача
+                    //-         .nheader__doctors_search
+                    //-             p.nheader__doctors_title Поиск врача
 
-                                form.nheader__form(action="#")
-                                    input.nheader_input_name(type="text" name="doctor_name" placeholder="ФИО врача")
-                                    .nheader_input_specialty
-                                        input(type="button" value="Специальность")
+                    //-             form.nheader__form(action="#")
+                    //-                 input.nheader_input_name(type="text" name="doctor_name" placeholder="ФИО врача")
+                    //-                 .nheader_input_specialty
+                    //-                     input(type="button" value="Специальность")
 
-                                        fieldset.nheader__doctors_fieldset
-                                            each item in doctors_list
-                                                label.nheader__doctors_label
-                                                    input(type="radio" name="doctors_speciality")
-                                                    span= item
+                    //-                     fieldset.nheader__doctors_fieldset
+                    //-                         each item in doctors_list
+                    //-                             label.nheader__doctors_label
+                    //-                                 input(type="radio" name="doctors_speciality")
+                    //-                                 span= item
 
 
-                                    button.nheader__submit(type="submit") Найти врача
+                    //-                 button.nheader__submit(type="submit") Найти врача
 
 
                     li.nheader__item: a(href="#") Комплексные программы

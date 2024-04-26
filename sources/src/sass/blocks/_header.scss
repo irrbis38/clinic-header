@@ -42,17 +42,18 @@
   }
 
   font-family: $font;
+  font-size: 16px;
 }
 
 .lining {
-  height: 153px;
+  min-height: 153px;
 
   @include md {
-    height: 68px;
+    min-height: 68px;
   }
 
   @include xs {
-    height: 54px;
+    min-height: 54px;
   }
 }
 
@@ -1042,6 +1043,7 @@
 
 .regionality__title {
   margin-bottom: 0 0 45px 0;
+  margin: 24px;
   font-weight: 700;
   font-size: 24px;
   line-height: 110%;
@@ -1089,12 +1091,17 @@
   }
 }
 
+.regionality__label {
+  display: grid;
+}
+
 .regionality__descr {
   position: relative;
   display: inline-block;
   width: 100%;
   min-height: 40px;
   padding: 12px 20px;
+  font-weight: 400;
   border-radius: 12px;
   transition: background-color 0.2s ease-out;
   cursor: pointer;
@@ -1319,113 +1326,113 @@
   }
 }
 
-.nheader__doctors {
-  // opacity: 1;
-  // visibility: visible;
-  // pointer-events: all;
-  min-width: 596px;
-  display: flex;
-  align-items: stretch;
+// .nheader__doctors {
+//   // opacity: 1;
+//   // visibility: visible;
+//   // pointer-events: all;
+//   min-width: 596px;
+//   display: flex;
+//   align-items: stretch;
 
-  @include md {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transform: translateX(100%);
-    min-width: 694px;
-    transition: transform 0.3s ease-out;
-    align-items: flex-start;
+//   @include md {
+//     position: absolute;
+//     top: 0;
+//     left: 100%;
+//     transform: translateX(100%);
+//     min-width: 694px;
+//     transition: transform 0.3s ease-out;
+//     align-items: flex-start;
 
-    &.active {
-      left: 0;
-      transform: translateX(-100%);
-    }
-  }
+//     &.active {
+//       left: 0;
+//       transform: translateX(-100%);
+//     }
+//   }
 
-  @include xs {
-    min-width: 100%;
+//   @include xs {
+//     min-width: 100%;
 
-    &.active {
-      left: 0;
-      transform: translateX(0);
-    }
-  }
-}
+//     &.active {
+//       left: 0;
+//       transform: translateX(0);
+//     }
+//   }
+// }
 
-.nheader__doctors_list {
-  width: 38.25%;
-  padding: 22px 0;
-  margin: 0;
-  list-style-type: none;
+// .nheader__doctors_list {
+//   width: 38.25%;
+//   padding: 22px 0;
+//   margin: 0;
+//   list-style-type: none;
 
-  a {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 35px 10px 18px;
-    white-space: wrap;
-    transition: background-color 0.2s ease-out;
+//   a {
+//     display: inline-block;
+//     width: 100%;
+//     padding: 10px 35px 10px 18px;
+//     white-space: wrap;
+//     transition: background-color 0.2s ease-out;
 
-    @media (hover: hover) {
-      &:hover {
-        background-color: $color_clinic_grey_border;
-      }
-    }
-  }
+//     @media (hover: hover) {
+//       &:hover {
+//         background-color: $color_clinic_grey_border;
+//       }
+//     }
+//   }
 
-  li {
-    &:last-child {
-      a {
-        color: $color_clinic_main1;
-      }
-    }
+//   li {
+//     &:last-child {
+//       a {
+//         color: $color_clinic_main1;
+//       }
+//     }
 
-    &:not(:last-child) {
-      margin-bottom: 4px;
-    }
-  }
+//     &:not(:last-child) {
+//       margin-bottom: 4px;
+//     }
+//   }
 
-  @include md {
-    a {
-      padding: 10px 24px 10px 12px;
-    }
-  }
+//   @include md {
+//     a {
+//       padding: 10px 24px 10px 12px;
+//     }
+//   }
 
-  @include xs {
-    width: 100%;
-    padding-top: 0;
+//   @include xs {
+//     width: 100%;
+//     padding-top: 0;
 
-    li {
-      &:first-child {
-        margin-top: 12px;
-      }
+//     li {
+//       &:first-child {
+//         margin-top: 12px;
+//       }
 
-      &:not(:last-child) {
-        margin-bottom: 12px;
-      }
-    }
-  }
-}
+//       &:not(:last-child) {
+//         margin-bottom: 12px;
+//       }
+//     }
+//   }
+// }
 
-.nheader__doctors_search {
-  width: 61.75%;
-  background-color: $color_clinic_main1;
-  padding: 62px 24px;
-  border-bottom-right-radius: 12px;
+// .nheader__doctors_search {
+//   width: 61.75%;
+//   background-color: $color_clinic_main1;
+//   padding: 62px 24px;
+//   border-bottom-right-radius: 12px;
 
-  @include xs {
-    width: 100%;
-    border-radius: 0;
-  }
-}
+//   @include xs {
+//     width: 100%;
+//     border-radius: 0;
+//   }
+// }
 
-.nheader__doctors_title {
-  margin: 0 0 16px 0;
-  font-weight: 300;
-  font-size: 21px;
-  line-height: 180%;
-  text-align: center;
-  color: $color_white;
-}
+// .nheader__doctors_title {
+//   margin: 0 0 16px 0;
+//   font-weight: 300;
+//   font-size: 21px;
+//   line-height: 180%;
+//   text-align: center;
+//   color: $color_white;
+// }
 
 .nheader__form input {
   display: block;
@@ -1480,87 +1487,89 @@
       transform: translateY(-50%) scaleY(-1);
     }
 
-    .nheader__doctors_fieldset {
-      display: block;
-    }
+    // .nheader__doctors_fieldset {
+    //   display: block;
+    // }
   }
 }
 
-.nheader__doctors_fieldset {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  // width: 100%;
-  max-height: 190px;
-  overflow-y: auto;
-  padding: 10px 16px;
-  margin: 0;
-  background-color: $color_white;
-  appearance: none;
-  outline: none;
-  border: 0;
-  display: none;
-  box-shadow: 0 1px 11px 0 rgba(197, 197, 197, 0.54);
+// .nheader__doctors_fieldset {
+//   position: absolute;
+//   top: 100%;
+//   left: 0;
+//   right: 0;
+//   // width: 100%;
+//   max-height: 190px;
+//   overflow-y: auto;
+//   padding: 10px 16px;
+//   margin: 0;
+//   background-color: $color_white;
+//   appearance: none;
+//   outline: none;
+//   border: 0;
+//   display: none;
+//   box-shadow: 0 1px 11px 0 rgba(197, 197, 197, 0.54);
 
-  @include xs {
-    max-height: 160px;
-  }
-}
+//   @include xs {
+//     max-height: 160px;
+//   }
+// }
 
-.nheader__doctors_label {
-  input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1px;
-    height: 1px;
-    z-index: -1;
-    opacity: 0;
-  }
+// .nheader__doctors_label {
+//   display: grid;
 
-  span {
-    position: relative;
-    display: block;
-    width: 100%;
-    min-height: 40px;
-    padding: 12px 20px;
-    border-radius: 12px;
-    transition: background-color 0.2s ease-out;
-    cursor: pointer;
+//   input {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 1px;
+//     height: 1px;
+//     z-index: -1;
+//     opacity: 0;
+//   }
 
-    @media (hover: hover) {
-      &:hover {
-        background-color: $color_clinic_grey_border;
-      }
-    }
-  }
+//   span {
+//     position: relative;
+//     display: block;
+//     width: 100%;
+//     min-height: 40px;
+//     padding: 12px 20px;
+//     border-radius: 12px;
+//     transition: background-color 0.2s ease-out;
+//     cursor: pointer;
 
-  @include xs {
-    white-space: wrap;
-  }
-}
+//     @media (hover: hover) {
+//       &:hover {
+//         background-color: $color_clinic_grey_border;
+//       }
+//     }
+//   }
 
-button.nheader__submit {
-  display: block;
-  min-height: 50px;
-  margin: 56px auto 0;
-  padding: 16px 24px 16px 28px;
-  color: $color_white;
-  border: 1px solid $color_white;
-  border-radius: 36px 0 24px 0;
-  transition: background-color 0.2s ease-out;
+//   @include xs {
+//     white-space: wrap;
+//   }
+// }
 
-  @media (hover: hover) {
-    &:hover {
-      background-color: $color_clinic_middleturquoise;
-    }
-  }
+// button.nheader__submit {
+//   display: block;
+//   min-height: 50px;
+//   margin: 56px auto 0;
+//   padding: 16px 24px 16px 28px;
+//   color: $color_white;
+//   border: 1px solid $color_white;
+//   border-radius: 36px 0 24px 0;
+//   transition: background-color 0.2s ease-out;
 
-  &:active {
-    background-color: $color_clinic_darkturquoise;
-  }
-}
+//   @media (hover: hover) {
+//     &:hover {
+//       background-color: $color_clinic_middleturquoise;
+//     }
+//   }
+
+//   &:active {
+//     background-color: $color_clinic_darkturquoise;
+//   }
+// }
 
 .nheader__services,
 .nheader__doctors {
@@ -1622,12 +1631,12 @@ button.nheader__submit {
   }
 }
 
-.nheader__doctors {
-  .nheader__back {
-    margin: 22px 24px 0;
+// .nheader__doctors {
+//   .nheader__back {
+//     margin: 22px 24px 0;
 
-    @include xs {
-      margin: 22px auto 0;
-    }
-  }
-}
+//     @include xs {
+//       margin: 22px auto 0;
+//     }
+//   }
+// }
