@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Первый Клинический Медицинский Центр</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="Клинический центр" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="./fonts/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+  <body class="index">
+    <div class="lining"></div>
+    <header class="nheader">
+      <div class="nheader__container">
+        <div class="nheader__logo_small"><img src="./images/nheader_logo_small.svg" alt="logo" w="39" h="40" decoding="async" loading="lazy" /></div>
+        <div class="nheader__top">
+          <div class="nheader__logo">
+            <picture class="picture object-fit-cover">
+              <source class="object-fit-cover" srcset="images/nheader_logo.webp, images/nheader_logo@2x.webp 2x" type="image/webp" />
+              <img class="picture__img object-fit-cover" src="images/nheader_logo.png" srcset="images/nheader_logo.png, images/nheader_logo@2x.png 2x" alt="" />
+            </picture>
+          </div>
+          <div class="nheader__location">
+            <button class="nheader__select regionality-select-btn" aria-label="Выбрать город"><span>Ковров</span></button>
+            <div class="nheader__info"><a class="nheader__phone" href="tel:+78005116884">+7 (800) 511-68-84</a><span class="nheader__adress">г.Ковров, ул. Ватутина, 90</span></div>
+          </div>
+          <div class="nheader__search">
+            <div class="nheader__search_wrapper">
+              <div class="nheader__search_inner">
+                <input type="text" placeholder="Поиск" />
+                <button aria-label="Начать поиск"></button>
+              </div>
+              <button class="nheader__search_close" aria-label="Скрыть окно поиска"></button>
+            </div>
+          </div>
+          <div class="nheader__nav">
+            <button class="nheader__search_toggle" aria-label="Показать окно поиска"></button>
+            <button class="nheader__auth" aria-label="Войти в личный кабинет"><span>Войти</span></button>
+            <button class="nheader__appointment" aria-label="Записаться на приём к врачу"><span>Записаться на приём</span></button>
+            <button class="nheader__burger" aria-label="Скрыть / показать мобильное меню">
+              <span class="header__icon"><span></span></span>
+            </button>
+          </div>
+        </div>
+        <nav class="nheader__menu">
+          <ul class="nheader__list">
+            <li class="nheader__item nheader-has-dropdown">
+              <a href="#">Услуги</a>
+              <div class="nheader__services">
+                <button class="nheader__back" aria-lable="Вернуться в предыдущее меню">Услуги</button>
+                <ul class="nheader__adult_list">
+                  <li>
+                    <p>Для взрослых</p>
+                  </li>
+                  <li><a href="#">Онкология</a></li>
+                  <li><a href="#">Кардиология</a></li>
+                  <li><a href="#">Офтальмология</a></li>
+                  <li><a href="#">Оториноларингология</a></li>
+                  <li><a href="#">Сосудистая хирургия</a></li>
+                  <li><a href="#">Гастроэнтерология</a></li>
+                  <li><a href="#">Медицина Сна</a></li>
+                  <li><a href="#">Хирургия</a></li>
+                  <li><a href="#">Пластическая хирургия</a></li>
+                  <li><a href="#">Все услуги</a></li>
+                </ul>
+                <ul class="nheader__kids_list">
+                  <li>
+                    <p>Для детей</p>
+                  </li>
+                  <li><a href="#">Педиатрия</a></li>
+                  <li><a href="#">Вакцинация</a></li>
+                  <li><a href="#">Программы здоровья</a></li>
+                  <li><a href="#">Стоматология</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nheader__item nheader-has-dropdown">
+              <a href="#">Врачи</a>
+              <div class="nheader__doctors">
+                <button class="nheader__back" aria-lable="Вернуться в предыдущее меню">Врачи</button>
+                <ul class="nheader__doctors_list">
+                  <li><a href="#">Онколог</a></li>
+                  <li><a href="#">Сердечно-сосудистый хирург</a></li>
+                  <li><a href="#">Оториноларинголог</a></li>
+                  <li><a href="#">Невролог</a></li>
+                  <li><a href="#">Гинеколог</a></li>
+                  <li><a href="#">Гастроэнтеролог</a></li>
+                  <li><a href="#">Травматолог</a></li>
+                  <li><a href="#">Все врачи</a></li>
+                </ul>
+                <div class="nheader__doctors_search">
+                  <p class="nheader__doctors_title">Поиск врача</p>
+                  <form class="nheader__form" action="#">
+                    <input class="nheader_input_name" type="text" name="doctor_name" placeholder="ФИО врача" />
+                    <div class="nheader_input_specialty">
+                      <input type="button" value="Специальность" />
+                      <fieldset class="nheader__doctors_fieldset">
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Онколог</span> </label>
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Сердечно-сосудистый хирург</span> </label>
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Оториноларинголог</span> </label>
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Невролог</span> </label>
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Гинеколог</span> </label>
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Гастроэнтеролог</span> </label>
+                        <label class="nheader__doctors_label"> <input type="radio" name="doctors_speciality" /><span>Травматолог</span> </label>
+                      </fieldset>
+                    </div>
+                    <button class="nheader__submit" type="submit">Найти врача</button>
+                  </form>
+                </div>
+              </div>
+            </li>
+            <li class="nheader__item"><a href="#">Комплексные программы</a></li>
+            <li class="nheader__item"><a href="#">ВМП</a></li>
+            <li class="nheader__item"><a href="#">Услуги по ДМС</a></li>
+            <li class="nheader__item"><a href="#">О центре</a></li>
+            <li class="nheader__item"><a href="#">Скорая медицинская помощь</a></li>
+            <li class="nheader__item"><a href="#">Акции</a></li>
+            <li class="nheader__item"><a href="#">Контакты</a></li>
+          </ul>
+          <div class="nheader__location_mobile">
+            <button class="nheader__select regionality-select-btn" aria-label="Выбрать город"><span>Ковров</span></button>
+            <div class="nheader__info"><a class="nheader__phone" href="tel:+78005116884">+7 (800) 511-68-84</a><span class="nheader__adress">г.Ковров, ул. Ватутина, 90</span></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="regionality">
+      <div class="regionality__overlay regionality-close-btn" aria-label="Закрыть окно выбора города"></div>
+      <div class="regionality__wrapper">
+        <button class="regionality__close regionality-close-btn" aria-label="Закрыть окно выбора города"></button>
+        <p class="regionality__title">Выберите ваш город</p>
+        <ul class="regionality__list">
+          <li class="regionality__item">
+            <label class="regionality__label">
+              <input type="radio" name="regionality" checked data-city="Ковров" data-phone="+7 (800) 511-68-84" data-phoneHref="+78005116884" data-adress="ул. Ватутина, 90" /><span
+                class="regionality__descr"
+              >
+                <span>Ковров</span></span
+              >
+            </label>
+          </li>
+          <li class="regionality__item">
+            <label class="regionality__label">
+              <input type="radio" name="regionality" data-city="Вязники" data-phone="+7 (800) 555-55-55" data-phoneHref="+78005555555" data-adress="ул. Либерецкая, 5А" /><span
+                class="regionality__descr"
+              >
+                <span>Вязники</span></span
+              >
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

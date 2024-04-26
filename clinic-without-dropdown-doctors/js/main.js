@@ -6,12 +6,12 @@ var initHeader = () => {
     close_search_btn = document.querySelector(".nheader__search_close"),
     menu = document.querySelector(".nheader__menu"),
     servicesMenu = document.querySelector(".nheader__services");
-  doctorsMenu = document.querySelector(".nheader__doctors");
+  // doctorsMenu = document.querySelector(".nheader__doctors");
 
   var clearElements = () => {
     menu.classList.remove("active");
     servicesMenu.classList.remove("active");
-    doctorsMenu.classList.remove("active");
+    // doctorsMenu.classList.remove("active");
     burger_btn.classList.remove("active");
     body.classList.remove("lock");
     // window.innerWidth <= 767 && body.classList.remove("lock");
@@ -20,9 +20,10 @@ var initHeader = () => {
   burger_btn.addEventListener("click", () => {
     var isMenuActive = menu.classList.contains("active");
     var isServicesActive = servicesMenu.classList.contains("active");
-    var isDoctorsActive = doctorsMenu.classList.contains("active");
+    // var isDoctorsActive = doctorsMenu.classList.contains("active");
 
-    if (isMenuActive || isServicesActive || isDoctorsActive) {
+    // if (isMenuActive || isServicesActive || isDoctorsActive) {
+    if (isMenuActive || isServicesActive) {
       clearElements();
     } else {
       menu.classList.add("active");
@@ -47,8 +48,10 @@ var initHeader = () => {
   toggle_search_btn.addEventListener("click", () => {
     toggle_search_btn.classList.toggle("active");
     search.classList.toggle("active");
-    burger_btn.classList.remove("active");
-    menu.classList.remove("active");
+    // [burger_btn, menu, servicesMenu, doctorsMenu].forEach((el) => {
+    [burger_btn, menu, servicesMenu].forEach((el) => {
+      el.classList.remove("active");
+    });
   });
 
   close_search_btn.addEventListener("click", () => {
@@ -138,31 +141,31 @@ var initHeader = () => {
 
   // toggle speciality list
 
-  var initSpecialityToggle = () => {
-    var speciality = document.querySelector(".nheader_input_specialty");
-    var specialty_input = speciality.querySelector(
-      ".nheader_input_specialty input"
-    );
-    var labels = Array.from(
-      document.querySelectorAll(".nheader__doctors_label")
-    );
+  // var initSpecialityToggle = () => {
+  //   var speciality = document.querySelector(".nheader_input_specialty");
+  //   var specialty_input = speciality.querySelector(
+  //     ".nheader_input_specialty input"
+  //   );
+  //   var labels = Array.from(
+  //     document.querySelectorAll(".nheader__doctors_label")
+  //   );
 
-    if (!specialty_input) return;
+  //   if (!specialty_input) return;
 
-    specialty_input.addEventListener("click", () => {
-      speciality.classList.toggle("active");
-    });
+  //   specialty_input.addEventListener("click", () => {
+  //     speciality.classList.toggle("active");
+  //   });
 
-    labels.forEach((label) => {
-      label.addEventListener("click", () => {
-        console.log("click");
-        speciality.classList.remove("active");
-        specialty_input.value = label.children[1].textContent;
-      });
-    });
-  };
+  //   labels.forEach((label) => {
+  //     label.addEventListener("click", () => {
+  //       console.log("click");
+  //       speciality.classList.remove("active");
+  //       specialty_input.value = label.children[1].textContent;
+  //     });
+  //   });
+  // };
 
-  initSpecialityToggle();
+  // initSpecialityToggle();
 };
 
 var initRegionality = () => {
